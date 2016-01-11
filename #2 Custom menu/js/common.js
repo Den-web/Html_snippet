@@ -1,3 +1,5 @@
+
+
 $(function() {
 
 	$(".sf-menu").superfish({
@@ -9,7 +11,7 @@ $(function() {
 	$("#mobile-menu").find("*").attr("style", "");
 	$("#mobile-menu").children("ul").removeClass("sf-menu")
 	.parent().mmenu({
-		extensions : [ 'widescreen', 'theme-white', 'effect-menu-slide', 'pagedim-black' ],
+		extensions :[ 'widescreen', 'theme-white', 'effect-menu-slide', 'pagedim-black' ],
 		navbar: {
 			title: "Меню"
 		}
