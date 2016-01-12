@@ -1,0 +1,78 @@
+
+body{
+  font: 1em/1.6em sans-serif;
+  color: #353535;
+}
+
+
+
+.clearfix:before, .clearfix:after{
+  content: " ";
+  display: table;
+}
+.clearfix:after{
+  clear: both;
+}
+
+.block{
+	width: 300px;
+	margin: 20px auto;
+	padding: 20px;
+	border: 1px solid #ddd;
+	-webkit-border-radius: 10px;
+	        border-radius: 10px;
+}
+
+.circle{
+	position: relative;
+	background: #3d3d3d;
+	width: 200px;
+	height: 200px;
+	margin: 0 auto;
+	color: #FFF;
+	line-height: 200px;
+	text-align: center;
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
+	font-size: 1.1em;
+	text-shadow: 1px 1px 1px #111;
+}
+.circle span{
+	position: relative;
+	z-index: 2;
+}
+
+.circle::after{
+	content: "";
+	width: 202px;
+	height: 202px;
+	background: #18aaa4;
+	display: block;
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
+	position: absolute;
+	top: -1px;
+	left: -1px;
+	z-index: 1;
+	-webkit-transition: 0.3s;
+	   -moz-transition: 0.3s;
+	    -ms-transition: 0.3s;
+	     -o-transition: 0.3s;
+	        transition: 0.3s;
+	
+}
+.circle:hover::after{
+	width: 0;
+	height: 0;
+	left: 100px;
+	top: 100px;
+	/* filter: blur(20px); -webkit-filter: blur(20px); */
+	-webkit-box-shadow: 0 0 20px 20px #3d3d3d insert;
+	        box-shadow: 0 0 20px 20px #3d3d3d insert;
+}
+
+.text{
+	color: #555;
+	font-size: 0.85em;
+	text-align: justify;
+}
