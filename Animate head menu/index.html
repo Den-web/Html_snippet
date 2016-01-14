@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+	<title>Жилье в Ильичевске</title>
+	<meta content="The fixed navigation UI pattern that puts content first, works (mostly) everywhere, and needs no jQuery!" name="description">
+	<meta content="width=device-width" name="viewport">
+	<link rel="stylesheet" href="stickymenu.css">
+</head>
+
+<body>
+	
+	<div class="menu-trigger"></div>
+	
+	<nav id="navbar">
+		<ul>
+			<li><a href="http://ethercycle.com">Главная</a></li>
+			<li><a href="http://ethercycle.com/stickymenu">О нас</a></li>
+			<li><a href="http://rainycafe.com">Контакты</a></li>
+		</ul>
+
+		<ul>
+			<li><a href="https://www.facebook.com/ethercycle">Facebook</a></li>
+			<li><a href="https://twitter.com/ethercycle">Twitter</a></li>
+			<li><a href="http://www.linkedin.com/company/ethercycle">Вконтакте</a></li>
+		</ul>
+	</nav>
+
+	<div id="container">
+		<h1>Сайт жилья в Ильичевске</h1>
+
+		<h2>The fixed navigation UI pattern that puts content first, works (mostly) everywhere, and needs no jQuery!</h2>
+
+		<p>Sticky menus are a design pattern that fix the navigation to the top of the page. While I won't go so far as saying scrolling back to top is a problem, <strong>sticky menus certainly make navigation faster</strong>. This makes them especially good for long-form pages especially those trendy single-page websites (like the one for your artisanal mustache wax startup.)</p>
+
+		<p>While sticky menus make navigation quicker, they also present a new problem: They take up screen real estate. That might not be a problem for the six percent of you with 30 inch monster displays, but for the rest of us with 13" notebooks, it's annoying. We solve the problem by <strong>moving the navigation out of the way out of the content.</strong> Go ahead, scroll down this page and you'll see what I mean.</p>
+
+		<p>On most displays, the menu is in the gutter or sidebar. I say most because this thing is <strong>crazy responsive.</strong> It works on all display widths, down to 320px. Yes, in all widths, the menu remains fixed to the top and readily accessible. On phones we cheat a little by using the popular iOS sliding menu style, but it's cool because we keep a navigation icon pinned to the top.</p>
+
+		<p>There are no dependencies. Aside from a little bit of JavaScript to append a class name on scroll, all the magic happens in CSS. This keeps your page load time low, and let's us sleep better knowing <strong>we're not using abusing jQuery.</strong></p>
+
+		<p><b>Cross Browser Compatibility</b><br>
+		This is tested and working in:</p>
+
+		<ol>
+			<li>Chrome 33</li>
+			<li>FireFox 27</li>
+			<li>iOS7</li>
+			<li>Safari 7</li>
+			<li>IE 9 (IE 10 for snazzy animations)</li>
+		</ol>
+
+		<p>Not saying it won't work in other browsers, we're only listing what we tested.</p>
+
+		<p>You dig it? <a href="http://ethercycle.com/stickymenu/stickymenu.zip">It's yours</a>.</p>
+
+		<p>Crazy Responsive Sticky Menu is distributed under a <em>Do What the Fuck You Want to Public License</em>. Everyone is permitted to copy and distribute verbatim or modified copies of this document, and changing it is allowed as long as the name is changed. You just do what the fuck you want to.</p>
+
+		<p style="font-style: italic; font-weight: bold">And now we bring you some extra content we had to add in order show off the hot scrolling action</p>
+
+		<div class="filler">
+			<p>Along the shore the cloud waves break,<br>
+			The twin suns sink beneath the lake,<br>
+			The shadows lengthen<br>
+			In Carcosa.</p>
+
+			<p>Strange is the night where black stars rise,<br>
+			And strange moons circle through the skies<br>
+			But stranger still is<br>
+			Lost Carcosa.</p>
+
+			<p>Songs that the Hyades shall sing,<br>
+			Where flap the tatters of the King,<br>
+			Must die unheard in<br>
+			Dim Carcosa.</p>
+
+			<p>Song of my soul, my voice is dead;<br>
+			Die thou, unsung, as tears unshed<br>
+			Shall dry and die in<br>
+			Lost Carcosa.</p>
+		</div>
+
+		<p>&copy; 2014 <a href="http://ethercycle.com/" title="Responsive Web Design &amp; Development Company - Ethercycle&#8480; — Chicago, IL">Ethercycle LLC</a>. All up in the <a href="https://twitter.com/ethercycle">Twitter</a>.</p>
+		
+	</div>
+
+	<script>
+		window.onscroll=function(){document.getElementById('navbar').setAttribute('class', (window.pageYOffset>5?'fixednav clearfix':'clearfix'));}
+	</script>
+	
+	<script>
+	(function() {
+		var $body = document.body
+		, $menu_trigger = $body.getElementsByClassName('menu-trigger')[0];
+
+		if ( typeof $menu_trigger !== 'undefined' ) {
+			$menu_trigger.addEventListener('click', function() {
+				$body.className = ( $body.className == 'menu-active' )? '' : 'menu-active';
+			});
+		}
+
+	}).call(this);
+	</script>
+
+</body>
+</html>
